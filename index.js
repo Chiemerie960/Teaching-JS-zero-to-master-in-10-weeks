@@ -1,15 +1,15 @@
 // var firstName = "John"; // String
 // const age = 23; // Number
 // let isOld = false; //Boolean
-const person = {
-  surName: "John",
-  lastName: "Doe",
-  age: 23,
-}; // Object
-const aray = [1, 2, 3, 4, 5]; // Array
+// const person = {
+//   surName: "John",
+//   lastName: "Doe",
+//   age: 23,
+// }; // Object
+// const aray = [1, 2, 3, 4, 5]; // Array
 
 // console.log(typeof isOld);
-isOld = 30;
+// isOld = 30;
 
 // console.log( typeof isOld);
 
@@ -18,14 +18,14 @@ isOld = 30;
 
 // Quick challenge
 // make the value of A and B change
-let a = 20;
-let b = 30;
+// let a = 20;
+// let b = 30;
 // console.log(a,b)
 // correction
 
-let c = b;
-b = a;
-a = c;
+// let c = b;
+// b = a;
+// a = c;
 // console.log(a,b)
 
 // Arithemtic Operators
@@ -192,12 +192,15 @@ a = c;
 // += 2 is used to make a variable increase by 2
 
 // loops
+
 // For loop
 // for(declaration, condition, increment/decrement){}
 // for (let i = 0; i < 10; i++) {
 //   console.log(i)
 // }
+
 // While loop
+
 // let j = 10;
 // while (j < 20) {
 //   j++;
@@ -222,7 +225,118 @@ a = c;
 //   console.log(user[prop], );
 // }
 // For of loop
-const numbers = [1, 2, 3, 4, 5]; // Array
-for (let num of numbers) {
-  console.log(num);
-}
+//
+
+// Quiz on loops
+// Write a program that console.log() out a list of numbers from 1 - 100 inclusive.
+// For every multiple of 3, console.log() "Fizz".
+// For every multiple of 5, console.log() "Buzz".
+// For numbers which are multiples of both 3 and 5, console.log() "FizzBuzz".
+
+// correction
+// for (let i = 1; i <= 100; i++) {
+//   if (i % 3 === 0 && i % 5 === 0) {
+//     console.log("FizzBuzz");
+//   } else if (i % 3 === 0) {
+//     console.log("Fizz");
+//   } else if (i % 5 === 0) {
+//     console.log("Buzz");
+//   } else {
+//     console.log(i);
+//   }
+// }
+//  Using While loop
+
+// let i = 1;
+// while (i <= 100) {
+//   if (i % 3 === 0 && i % 5 === 0) {
+//     console.log("FizzBuzz");
+//   } else if (i % 3 === 0) {
+//     console.log("Fizz");
+//   } else if (i % 5 === 0) {
+//     console.log("Buzz");
+//   } else {
+//     console.log(i);
+//   }
+//   i++;
+// }
+
+// Using do while
+
+// let i = 1;
+// do {
+//   if (i % 3 === 0 && i % 5 === 0) {
+//     console.log("FizzBuzz");
+//   } else if (i % 3 === 0) {
+//     console.log("Fizz");
+//   } else if (i % 5 === 0) {
+//     console.log("Buzz");
+//   } else {
+//     console.log(i);
+//   }
+//   i++;
+// } while (i <= 100);
+
+// Arrays in javascript
+
+// let array = [1, 2, 3, 4, 5, "Tobenna"]; // Array
+
+// push - to add an element to an array
+
+// array.push(6);
+// console.log(array)
+
+// pop - to remove an element from an array
+
+// array.pop();
+// console.log(array)
+
+// unshift - to add an element to the beginning of an array
+
+// array.unshift("Soma");
+// console.log(array)
+
+// shift
+
+// array.shift();
+// console.log(array)
+
+let names = ["Soma", "John", "Doe", "Tobenna", "Isaac", "76"];
+
+// splice - to remove an element or groups of elements from an array
+
+// names.splice(2, 5);
+
+// // slice - to remove an element from an array with a specific index
+// names.slice(0);
+
+// // includes - to check if an element is in an array
+// names.includes("Tobenna");
+
+// filter - to filter an array
+const tobe = names.filter((name) => {
+  name === "tobenna";
+});
+console.log(tobe);
+
+// //find - to find an element in an array
+// names.find((name) => name === "Tobenna");
+
+// forEach - to loop through an array
+// names.forEach((name) => {
+//   console.log(`for each ${name}`);
+// });
+
+// // map - to loop through an array
+// names.map((name) => {
+//   console.log(`map ${name}`);
+// });
+
+// toLowerCase - to convert a string to lowercase
+// names.forEach((name) => {
+//   console.log(name.toUpperCase());
+// })
+// // toUpperCase - to convert a string to uppercase
+// names.toUpperCase();
+
+// Read up on array methods 
