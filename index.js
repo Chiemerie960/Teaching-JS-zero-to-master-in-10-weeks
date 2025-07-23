@@ -181,7 +181,48 @@ a = c;
 
 // ternary operators
 // condition ? true : false
-let age = 20;
-!(age >= 30)
-  ? console.log("Why haven't you gotten married yet?")
-  : console.log("You have no business having a child");
+// let age = 20;
+// !(age >= 30)
+//   ? console.log("Why haven't you gotten married yet?")
+//   : console.log("You have no business having a child");
+
+// ++ is used to make a variable increase by 1
+// -- is used to make a variable decrease by 1
+// -= 2 is used to make a variable decrease by 2
+// += 2 is used to make a variable increase by 2
+
+// loops
+// For loop
+// for(declaration, condition, increment/decrement){}
+// for (let i = 0; i < 10; i++) {
+//   console.log(i)
+// }
+// While loop
+// let j = 10;
+// while (j < 20) {
+//   j++;
+//   console.log(j);
+// }
+
+// Do while loop
+
+// let j = 10;
+// do {
+//   console.log(j);
+//   j++;
+// } while (j < 20);
+
+// For in loop
+// const user = {
+//   surName: "John",
+//   lastName: "Doe",
+//   age: 23,
+// }; // Object
+// for (let prop in user) {
+//   console.log(user[prop], );
+// }
+// For of loop
+const numbers = [1, 2, 3, 4, 5]; // Array
+for (let num of numbers) {
+  console.log(num);
+}
