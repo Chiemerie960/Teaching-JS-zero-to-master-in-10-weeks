@@ -301,7 +301,7 @@
 // array.shift();
 // console.log(array)
 
-let names = ["Soma", "John", "Doe", "Tobenna", "Isaac", "76"];
+// let names = ["Soma", "John", "Doe", "Tobenna", "Isaac", "76"];
 
 // splice - to remove an element or groups of elements from an array
 
@@ -314,10 +314,10 @@ let names = ["Soma", "John", "Doe", "Tobenna", "Isaac", "76"];
 // names.includes("Tobenna");
 
 // filter - to filter an array
-const tobe = names.filter((name) => {
-  name === "tobenna";
-});
-console.log(tobe);
+// const tobe = names.filter((name) => {
+//   name === "tobenna";
+// });
+// console.log(tobe);
 
 // //find - to find an element in an array
 // names.find((name) => name === "Tobenna");
