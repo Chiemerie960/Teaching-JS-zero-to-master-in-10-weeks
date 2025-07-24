@@ -301,11 +301,12 @@
 // array.shift();
 // console.log(array)
 
-// let names = ["Soma", "John", "Doe", "Tobenna", "Isaac", "76"];
+let names = ["Soma", "John", "Doe", "Tobenna", "Isaac", "76"];
 
 // splice - to remove an element or groups of elements from an array
 
-// names.splice(2, 5);
+// names.splice(2, 5, "Emerie", "Josephine");
+// console.log(names);
 
 // // slice - to remove an element from an array with a specific index
 // names.slice(0);
@@ -339,4 +340,120 @@
 // // toUpperCase - to convert a string to uppercase
 // names.toUpperCase();
 
-// Read up on array methods 
+// Sort
+// let numbers = [2, 1, 7, 4, 5, 3, 6, 8, 10, 9];
+// names.sort()
+// numbers.sort((a, b) => {
+//   return a - b
+// });
+// console.log(names)
+// console.log(numbers)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Using all I've taught since the beginning of this class
+// Create an array with the following words:
+// ["apple", "banana", "gourmand", "orange"]
+// Ask the user to guess a word using prompt().
+// (Make sure the guess is case-insensitive.)
+// The user has 3 attempts to guess any one of the words in the array.
+// If the user's guess matches a word in the array:
+// Display: "You have guessed correctly!"
+// End the game immediately.
+// If the user's guess is not in the array:
+// Display: "Incorrect, you have X attempts left."
+// (Replace X with the remaining attempts.)
+// If the user uses up all 3 attempts without a correct guess:
+// Display: "Sorry, you've used all your attempts. Game over!"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Using a for loop
+
+// const words = ["apple", "banana", "gourmand", "orange"];
+// let guessedCorrectly = false;
+
+// for (let attempts = 3; attempts > 0; attempts--) {
+//   let guess = prompt(`Guess a word (${attempts} attempts left):`).toLowerCase();
+
+//   if (words.includes(guess)) {
+//     alert("You have guessed correctly!");
+//     guessedCorrectly = true;
+//     break;
+//   } else {
+//     alert(`Incorrect, you have ${attempts - 1} attempts left.`);
+//   }
+// }
+
+// if (!guessedCorrectly) {
+//   alert("Sorry, you've used all your attempts. Game over!");
+// }
+
+// Using a while loop - Assignment
+
