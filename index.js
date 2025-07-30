@@ -349,43 +349,6 @@ let names = ["Soma", "John", "Doe", "Tobenna", "Isaac", "76"];
 // console.log(names)
 // console.log(numbers)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Using all I've taught since the beginning of this class
 // Create an array with the following words:
 // ["apple", "banana", "gourmand", "orange"]
@@ -400,39 +363,6 @@ let names = ["Soma", "John", "Doe", "Tobenna", "Isaac", "76"];
 // (Replace X with the remaining attempts.)
 // If the user uses up all 3 attempts without a correct guess:
 // Display: "Sorry, you've used all your attempts. Game over!"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // Using a for loop
 
@@ -457,3 +387,120 @@ let names = ["Soma", "John", "Doe", "Tobenna", "Isaac", "76"];
 
 // Using a while loop - Assignment
 
+// correction
+
+// const words = ["apple", "banana", "gourmand", "orange"];
+// let guessedCorrectly = false;
+// let attempts = 3;
+
+// while (attempts > 0) {
+//   let guess = prompt(`Guess a word (${attempts} attempts left):`).toLowerCase();
+
+//   if (words.includes(guess)) {
+//     alert("You have guessed correctly!");
+//     guessedCorrectly = true;
+//     break;
+//   } else {
+//     alert(`Incorrect, you have ${attempts - 1} attempts left.`);
+//     attempts--;
+//   }
+// }
+
+// if (!guessedCorrectly) {
+//   alert("Sorry, you've used all your attempts. Game over!");
+// }
+
+// Functions, function declaration, parameters, arguments and return value
+
+// What is a function?
+
+// A function is a block of code that performs a specific task or set of tasks when it is called.
+
+// Why use functions?
+
+// Functions can be to avoid code duplication.
+// Functions can help making the code easier to read and understand.
+// Functions can help making the code easier to maintain.
+// Functions can help making the code easier to test.
+// Functions can help making the code easier to reuse.
+
+// How to declare a function?
+
+// function nameOfFunction() {
+//   // code to be executed
+// }
+// nameOfFunction() - this is how you call a function
+
+// what are parameters and arguments?
+
+// Parameters are the variables that are passed to a function when it is called.
+// Arguments are the values that are passed to a function when it is called.
+
+// differences between parameters and arguments?
+
+// Parameters are the variables that are declared inside a function while arguments are the values that are passed to a function when it is called.
+
+// How to pass one parameter to a function?
+
+// function nameOfFunction(parameter) {
+//   // code to be executed
+// }
+// nameOfFunction("value") - this is how you call a function and pass a parameter
+
+// function getAge(age) {
+//   console.log(`You're ${age} years old`);
+// }
+
+// getAge(20);
+
+// How to pass multiple parameters to a function?
+
+// function nameOfFunction(parameter1, parameter2) {
+//   // code to be executed
+// }
+// nameOfFunction("value1", "value2") - this is how you call a function and pass multiple parameters
+
+// What is a return value?
+
+// A return value is the value that is returned from a function when it is called.
+
+// How to return a value from a function?
+
+// function nameOfFunction() {
+//   // code to be executed
+//   return value;
+// }
+// nameOfFunction() - this is how you call a function and return a value
+
+// function getAge(age) {
+//   if (age < 0) {
+//     return "Age cannot be negative";
+//   }
+//   return `You're ${age} years old`;
+// }
+
+// console.log(getAge(-1));
+
+// function twoNums(a,b) {
+//   return a + b;
+// }
+
+// console.log(twoNums(2,3));
+
+// function nameOfFunction(parameter) {
+//   // code to be executed
+//   return value;
+// }
+// nameOfFunction("valueForParameter") - this is how you call a function and pass a parameter and return a value
+
+// function nameOfFunction(parameter1, parameter2) {
+//   // code to be executed
+//   return value;
+// }
+// nameOfFunction("valueForParameter1", "valueForParameter2") - this is how you call a function and pass multiple parameters and return a value
+
+// mini-challenge
+// 1. Write a function that returns the products of 2 numbers.
+// 2. Write a function bookInfo(title,author) that returns: "The book title by author".
+// 3. Write a function that takes in 2 numbers and the operator (add,sub,mul,div) and returns the result.
+//
