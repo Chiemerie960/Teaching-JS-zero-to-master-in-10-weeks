@@ -301,7 +301,7 @@
 // array.shift();
 // console.log(array)
 
-let names = ["Soma", "John", "Doe", "Tobenna", "Isaac", "76"];
+// let names = ["Soma", "John", "Doe", "Tobenna", "Isaac", "76"];
 
 // splice - to remove an element or groups of elements from an array
 
@@ -502,5 +502,139 @@ let names = ["Soma", "John", "Doe", "Tobenna", "Isaac", "76"];
 // mini-challenge
 // 1. Write a function that returns the products of 2 numbers.
 // 2. Write a function bookInfo(title,author) that returns: "The book title by author".
-// 3. Write a function that takes in 2 numbers and the operator (add,sub,mul,div) and returns the result.
-//
+// 3. Write a function that takes in 2 numbers and the operator (add or addition,sub or subtract,mul or multiply,div or divide)
+//  and returns the result. Remember to pass the values in the function as an argument
+
+//  Corrections
+// challenge 1
+// function productOfNumbers(a, b) {
+//   return a * b;
+// }
+// productOfNumbers(34, 6);
+
+// //  Challenge 2
+// function bookInfo(title, author) {
+//   return `The book ${title} was written by ${author}`;
+// }
+// console.log(bookInfo("Half of a yellow sun", "Chimamanda Adichie"));
+
+// // challenge 3
+
+// function miniCalculator(num1, num2, operation) {
+//   if (operation === "add" || operation === "addition") {
+//     return num1 + num2;
+//   } else if (operation === "sub" || operation === "subtract") {
+//     return num1 - num2;
+//   } else if (operation === "mul" || operation === "multipy") {
+//     return num1 * num2;
+//   } else if (operation === "div" || operation === "division") {
+//     if (num2 === 0) {
+//       return "Zero can not divide a number mugu";
+//     }
+//     return num1 / num2;
+//   } else {
+//     return "Either you gave a wrong operation or you're dumb";
+//   }
+// }
+// let num1 = parseInt(prompt("what is the first number?"));
+// let num2 = parseInt(prompt("What is the second number?"));
+// let operation = prompt(
+//   "Which Operation?(add/addition, sub/subtract, mul/multiply, div/divide"
+// ).toLowerCase();
+// console.log(miniCalculator(num1, num2, operation));
+
+// Function declaration / function expression
+
+// A function declaration is a function that is or can be declared before it is called.
+// A function expression is a function that is declared after it is called/  expressions allow you to assign a function to a variable.. this is a relatively new concept to javascript being added in ES6.
+
+// Examples of both
+// function greet(){
+//   console.log("Hello, I'm a function declaration")
+// }
+// greet();
+// const greetings = function(){
+//   console.log("Hello to you, I'm a function expression")
+// }
+// greetings()
+
+// difference between declaration and expressions
+//  declarations can be hoisted (it can be called before being defined)
+//  Expressions can't be hoisted (it can only be called after being defined)
+
+// Quick test
+//  Write a function expression to check if a number is odd.
+
+// Arrow functions
+
+// Arrow functions are a shorter syntax for writing function expressions in JavaScript, introduced in ES6. They are commonly used for callbacks (e.g., inside map, filter) and where lexical THIS binding is needed. However, they lack their own THIS, arguments, and cannot be used as constructors. When we get to OOP we'd discuss about the this keyword.
+
+// Examples of arrow functions
+
+// const add = (a, b) => a + b; // single line
+// const subtract = (a, b) => a - b;
+// const multiply = (a, b) => a * b;
+// const divide = (a, b) => a / b;
+// const greet = a => console.log(`Hello ${a}`);
+
+// When you want to write an arrow funtion with multiple lines we use curly brackets like so
+
+// const greet = () => {
+//   console.log("Hello");
+// };
+
+// Difference between traditional function and arrow functions.
+
+// Traditional functions have their own this keyword and arguments keyword.
+// Arrow functions do not have their own this keyword and arguments keyword.
+
+// Quick test
+//  Write an arrow function to check if a number is even.
+//  Write an arrow function that returns the max of 3 numbers.
+
+// correction
+
+// const isEven = num => num % 2 === 0;
+// const maxOfThree = (a, b, c) => {
+//   return a > b
+//   ? (a > c ? a : c)
+//   : (b > c ? b : c);
+// };
+// const maxOfThree = (a, b, c) => {
+//   if (a >= b && a >= c) {
+//     return a;
+//   }
+//   if (b >= a && b >= c) {
+//     return b;
+//   }
+//   return c;
+// };
+// console.log(maxOfThree(2, 2, 1));
+// Scope
+
+//  Scope determines where variables and functions are accessible or the positions of variables in your code and functions.
+//  Types:-
+//   Global Scope: accessible everywhere.
+//   Function Scope: variables declared inside functions.
+//   Block Scope: let/const inside {} only accessible inside block
+
+// Examples
+
+// global scope
+// const names = "Emerie"
+// function getAge(age){
+//   let height = 10;
+//   console.log(height);
+// }
+// getAge(20);
+
+// console.log(names);
+// for(let i = 0; i < 10; i++){
+//   console.log(i);
+//   let height = 50;
+//   console.log(height);
+// }
+
+// Sharp Assignment
+//  Write an arrow function that returns the max of 8 numbers. ?(using ternary operators and no help of artificial intelligence)
+// Read on the Math objects and how to use them.
