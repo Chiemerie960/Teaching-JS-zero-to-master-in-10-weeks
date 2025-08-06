@@ -638,3 +638,206 @@
 // Sharp Assignment
 //  Write an arrow function that returns the max of 8 numbers. ?(using ternary operators and no help of artificial intelligence)
 // Read on the Math objects and how to use them.
+
+// Test
+
+// Create a word-guessing game where the computer scrambles a word from a predefined list and the user has to guess the original word. The player has limited attempts.
+// Requirements:
+// Declare an array of at least 5 words (e.g., ["planet", "bridge", "signal", "shadow", "motion"])
+// Use a function to:
+// Select a random word from the array.
+// Scramble (shuffle) the letters of the selected word.
+// Prompt the user to guess the original word.
+// Give the user 5 attempts to guess.
+// After each wrong guess, tell them how many tries are left.
+// If they guess right, display a congratulatory message.
+// If they fail all attempts, reveal the correct word.
+// Don't use:
+// No use of objects or classes.
+// Do not interact with the browser (no document, no DOM).
+// No promises, fetch, async/await, or other asynchronous code.
+// Store everything using variables, arrays, loops, and functions.
+
+//  assignment
+
+// Write a program that takes a simple math expression as input (e.g. "7 + 3 * 2 - 4 / 2"), and evaluates it respecting the order of operations (BODMAS/BIDMAS).
+// Requirements:
+// Prompt the user to enter an arithmetic expression, e.g.,
+// 7 + 3 * 2 - 4 / 2
+// Your program must:
+// Parse the expression (split it into numbers and operators).
+// Evaluate multiplication and division first, then addition and subtraction.
+// Support positive integers and spaces between expressions.
+// Display the final result.
+// Use only:
+// Arrays
+// Functions
+// Conditionals
+// Loops
+// Basic string methods (split(), trim(), etc.)
+
+// test correction
+
+const words = ["apple", "banana", "gourmand", "orange"];
+
+function scrambleWord(word) {
+  let letters = word.split("");
+  for (let i = letters.length - 1; i > 0; i--) {
+    let j = Math.floor(Math.random() * (i + 1));
+    [letters[i], letters[j]] = [letters[j], letters[i]];
+  }
+  return letters.join("");
+}
+
+// function startGame() {
+
+//   let selectedWord = words[Math.floor(Math.random() * words.length)]; // get a random word from the array
+//   let scrambledWord = scrambleWord(selectedWord); // scramble the word
+
+//   let attempts = 5;
+
+//   while (attempts > 0) {
+//     let guess = prompt(`Guess the word (${scrambledWord}) (${attempts} attempts left):`).toLowerCase();
+
+//     if (guess === selectedWord) {
+//       alert(`Congratulations! You guessed the word: ${selectedWord}`);
+//       break;
+//     } else {
+//       attempts--;
+//       alert(`Incorrect. You have ${attempts} attempts left.`);
+//     }
+//   }
+
+//   if (attempts === 0) {
+//     alert(`Game over. The correct word was: ${selectedWord}`);
+//   }
+
+//   // console.log(scrambledWord);
+// }
+// startGame();
+// console.log(scrambleWord(words[2]));
+
+// Assignment - correction
+
+// let input = prompt("Enter a math expression (e.g. 7 + 3 * 2 - 4 / 2):");
+
+// let expressions = input.split(" ").filter((t) => t.trim());
+
+// function parseExpressions(expressions) {
+//   return expressions.map((expression) => {
+//     return isNaN(expression) ? expression : Number(expression);
+//   });
+// }
+
+// let parsed = parseExpressions(expressions);
+
+// function evaluateOperators(arr, operators) {
+//   let i = 0;
+//   while (i < arr.length) {
+//     if (operators.includes(arr[i])) {
+//       let operator = arr[i];
+//       let left = arr[i - 1];
+//       let right = arr[i + 1];
+
+//       let result;
+//       if (operator === "*") {
+//         result = left * right;
+//       } else if (operator === "/") {
+//         result = left / right;
+//       }
+
+//       arr.splice(i - 1, 3, result);
+
+//       i = i - 1;
+//     } else {
+//       i++;
+//     }
+//   }
+//   return arr;
+// }
+
+// function evaluateAddSubtract(arr) {
+//   let result = arr[0];
+
+//   for (let i = 1; i < arr.length; i += 2) {
+//     let operator = arr[i];
+//     let next = arr[i + 1];
+
+//     if (operator === "+") {
+//       result += next;
+//     } else if (operator === "-") {
+//       result -= next;
+//     }
+//   }
+
+//   return result;
+// }
+
+// parsed = evaluateOperators(parsed, ["*", "/"]);
+// let finalResult = evaluateAddSubtract(parsed);
+
+// console.log("Evaluated Result:", finalResult);
+// alert("Evaluated Result: " + finalResult);
+
+
+
+
+
+let expresions = ["7", "+", "3", "*", "2", "-", "4", "/", "2"];
+
+function parseTheExpression(expresions){
+  return expresions.map((exp) => {
+    if (isNaN(exp)) {
+      return exp
+    } 
+    else {
+      return Number(exp)
+    }
+  })
+}
+ console.log(parseTheExpression(expresions)) 
+
+ let parsed = parseTheExpression(expresions);
+
+ let demoArray = [1,2,3,4,5,6,7,8,9,10]
+
+function evaluateOperators(arr, operators) {
+  for (let i = 0;i < arr.length; i++) {
+    if (operators.includes(arr[i])) {
+      let operator = arr[i];
+      let left = arr[i - 1];
+      let right = arr[i + 1];
+
+      let result;
+      if (operator === "*") {
+        result = left * right;
+      } else if (operator === "/") {
+        result = left / right;
+      }
+
+      arr.splice(i - 1, 3, result);
+
+      i = i - 1;
+    }
+  }
+  return arr;
+}
+function evaluateAddSubtract(arr) {
+  let result = arr[0];
+
+  for (let i = 1; i < arr.length; i += 2) {
+    let operator = arr[i];
+    let next = arr[i + 1];
+
+    if (operator === "+") {
+      result += next;
+    } else if (operator === "-") {
+      result -= next;
+    }
+  }
+
+  return result;
+}
+parsed = evaluateOperators(parsed, ["*", "/"])
+let finalResult = evaluateAddSubtract(parsed)
+console.log(finalResult)
