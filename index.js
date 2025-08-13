@@ -779,65 +779,89 @@ function scrambleWord(word) {
 // console.log("Evaluated Result:", finalResult);
 // alert("Evaluated Result: " + finalResult);
 
+// let expresions = ["7", "+", "3", "*", "2", "-", "4", "/", "2"];
+
+// function parseTheExpression(expresions) {
+//   return expresions.map((exp) => {
+//     if (isNaN(exp)) {
+//       return exp;
+//     } else {
+//       return Number(exp);
+//     }
+//   });
+// }
+// console.log(parseTheExpression(expresions));
+
+// let parsed = parseTheExpression(expresions);
+
+// function evaluateOperators(arr, operators) {
+//   for (let i = 0; i < arr.length; i++) {
+//     if (operators.includes(arr[i])) {
+//       let operator = arr[i];
+//       let left = arr[i - 1];
+//       let right = arr[i + 1];
+
+//       let result;
+//       if (operator === "*") {
+//         result = left * right;
+//       } else if (operator === "/") {
+//         result = left / right;
+//       }
+
+//       arr.splice(i - 1, 3, result);
+
+//       i = i - 1;
+//     }
+//   }
+//   return arr;
+// }
+
+// parsed = evaluateOperators(parsed, ["*", "/"]);
+
+// function evaluateAddSubtract(arr) {
+//   let firstPositionInTheArray = arr[0];
+
+//   for (let i = 1; i < arr.length; i += 2) {
+//     let operator = arr[i];
+//     let next = arr[i + 1];
+
+//     if (operator === "+") {
+//       firstPositionInTheArray += next;
+//     } else if (operator === "-") {
+//       firstPositionInTheArray -= next;
+//     }
+//   }
+
+//   return firstPositionInTheArray;
+// }
+// let finalResult = evaluateAddSubtract(parsed);
+// console.log(finalResult);
+
+// Objects
+// An object is a collection of properties, which are key-value pairs. Objects are used to store data and functions, and they are used to create objects.
+
+// const person = {
+//   name: "Tobe",
+//   age: 30,
+//   isStupid: true,
+//   sayHello: () => {
+//     console.log("Hello, my name is " + this.name);
+//     console.log(`${this.name} is ${this.isStupid ? "stupid" : "crazy"}`);
+//   },
+// };
+// // console.log(person);
+// // console.log(person.name);
+// // console.log(person.age);
+// person.sayHello();
+
+// const paragraphs = document.querySelectorAll("p");
+// // console.log(paragraphs)
+// paragraphs.forEach((node) => {
+//   node.classList.remove("p");
+//   // node.style.display = "none";
+// });
+
+// console.log(document.getElementsByClassName("p"));
+// console.log(document.querySelectorAll(".p"));
 
 
-
-
-let expresions = ["7", "+", "3", "*", "2", "-", "4", "/", "2"];
-
-function parseTheExpression(expresions){
-  return expresions.map((exp) => {
-    if (isNaN(exp)) {
-      return exp
-    } 
-    else {
-      return Number(exp)
-    }
-  })
-}
- console.log(parseTheExpression(expresions)) 
-
- let parsed = parseTheExpression(expresions);
-
- let demoArray = [1,2,3,4,5,6,7,8,9,10]
-
-function evaluateOperators(arr, operators) {
-  for (let i = 0;i < arr.length; i++) {
-    if (operators.includes(arr[i])) {
-      let operator = arr[i];
-      let left = arr[i - 1];
-      let right = arr[i + 1];
-
-      let result;
-      if (operator === "*") {
-        result = left * right;
-      } else if (operator === "/") {
-        result = left / right;
-      }
-
-      arr.splice(i - 1, 3, result);
-
-      i = i - 1;
-    }
-  }
-  return arr;
-}
-function evaluateAddSubtract(arr) {
-  let result = arr[0];
-
-  for (let i = 1; i < arr.length; i += 2) {
-    let operator = arr[i];
-    let next = arr[i + 1];
-
-    if (operator === "+") {
-      result += next;
-    } else if (operator === "-") {
-      result -= next;
-    }
-  }
-
-  return result;
-}
-parsed = evaluateOperators(parsed, ["*", "/"])
-let finalResult = evaluateAddSubtract(parsed)
-console.log(finalResult)
