@@ -1,0 +1,201 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: #f4f6f8;
+  color: #333;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: flex-start;
+}
+.todo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  width: 80%;
+}
+.container {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== Header ===== */
+h1 {
+  text-align: center;
+  color: #222;
+  margin-bottom: 15px;
+}
+input {
+  min-width: 750px;
+}
+/* ===== Input & Button ===== */
+.input-group {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+#todo-input {
+  flex: 1;
+  padding: 10px 14px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+  background-color: #f9f9f9;
+}
+
+#todo-input:focus {
+  border-color: #4a90e2;
+  background-color: #fff;
+  box-shadow: 0 0 6px rgba(74, 144, 226, 0.3);
+}
+
+#add-btn {
+  padding: 10px 16px;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: 0.2s;
+}
+
+#add-btn:hover {
+  background-color: #357abd;
+}
+
+/* ===== Search Bar ===== */
+.search-container {
+  margin-bottom: 15px;
+}
+
+#search-input {
+  width: 100%;
+  padding: 10px 14px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+  background-color: #f9f9f9;
+}
+
+#search-input:focus {
+  border-color: #4a90e2;
+  background-color: #fff;
+  box-shadow: 0 0 6px rgba(74, 144, 226, 0.3);
+}
+
+/* ===== Todo List ===== */
+#todo-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 3rem;
+}
+
+#todo-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  margin-bottom: 8px;
+  background: #ababab;
+  border-radius: 8px;
+  transition: 0.2s;
+}
+#todo-list li span {
+  flex-basis: 80%;
+}
+#todo-list li div {
+  flex-basis: 20%;
+  display: flex;
+  gap: 1rem;
+}
+
+#todo-list li div .edit-btn {
+  background-color: #459bf1;
+  padding: 0.5rem 1rem;
+  color: white;
+
+}
+
+#todo-list li div .delete-btn {
+  background-color: rgb(214, 13, 13);
+  padding: 0.5rem 1rem;
+  color: white;
+
+}
+#todo-list li:hover {
+  background: #a0a0a0;
+  border: #adadad;
+}
+#todo-list li.completed {
+  background-color: rgba(17, 154, 17, 0.261);
+}
+
+#todo-list li.completed span {
+  text-decoration: line-through;
+  color: #888;
+}
+
+/* ===== Button Group in Todos ===== */
+.btn-group {
+  display: flex;
+  gap: 5px;
+}
+
+.btn-group button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #555;
+  transition: color 0.2s;
+}
+
+.btn-group button:hover {
+  color: #4a90e2;
+}
+
+/* ===== Filter Buttons ===== */
+.filter-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 15px;
+}
+
+.filter-btn {
+  padding: 8px 12px;
+  border: 2px solid #ccc;
+  background: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.filter-btn:hover {
+  border-color: #4a90e2;
+  color: #4a90e2;
+}
+
+.filter-btn.active {
+  background: #4a90e2;
+  color: white;
+  border-color: #4a90e2;
+}

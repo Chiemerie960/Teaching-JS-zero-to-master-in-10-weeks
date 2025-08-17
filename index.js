@@ -678,16 +678,16 @@
 
 // test correction
 
-const words = ["apple", "banana", "gourmand", "orange"];
+// const words = ["apple", "banana", "gourmand", "orange"];
 
-function scrambleWord(word) {
-  let letters = word.split("");
-  for (let i = letters.length - 1; i > 0; i--) {
-    let j = Math.floor(Math.random() * (i + 1));
-    [letters[i], letters[j]] = [letters[j], letters[i]];
-  }
-  return letters.join("");
-}
+// function scrambleWord(word) {
+//   let letters = word.split("");
+//   for (let i = letters.length - 1; i > 0; i--) {
+//     let j = Math.floor(Math.random() * (i + 1));
+//     [letters[i], letters[j]] = [letters[j], letters[i]];
+//   }
+//   return letters.join("");
+// }
 
 // function startGame() {
 
@@ -864,4 +864,39 @@ function scrambleWord(word) {
 // console.log(document.getElementsByClassName("p"));
 // console.log(document.querySelectorAll(".p"));
 
+// Quick quiz - create an object and display all the items in the object on your browser!
+// Note: you're to loop through the object rather than select each item one after the other
 
+// const button = document.querySelector(".btn");
+// const display = document.querySelector(".div");
+
+// const user = {
+//   fullName: "Obinna-Eze Tobechukwu",
+//   age: 22,
+//   iqLevel: 12,
+//   kink: "Feet fetish & licking toes & rubbing armpits and so on...",
+//   rejectionRate: "S rank",
+// };
+// for (key in user) {
+//   display.style.backgroundColor = "green";
+//   display.style.padding = "1rem";
+//   const eachItem = document.createElement("div");
+//   eachItem.style.backgroundColor = "blue"
+//   eachItem.style.color = "white"
+//   eachItem.style.width = "fit-content"
+//   eachItem.innerText = `${key}: ${user[key]}`;
+//   display.appendChild(eachItem);
+// }
+
+// button.addEventListener("click", () => {
+//   console.log("clicked");
+// });
+// const input = document.querySelector("input");
+// const form = document.querySelector("form");
+// input.addEventListener("keyup", (e) => {
+//   e.preventDefault();
+//   display.innerHTML = e.target.value
+// });
+
+// Quick quiz
+// update your html with you input immediately(that is, as you type in the input let it display immediately in yout html)
