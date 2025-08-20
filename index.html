@@ -3,12 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
     <title>Document</title>
   </head>
   <body>
-    <div class="div" id="div"></div>
-    <button class="btn">click</button>
-      <input type="text" class="input">
+    <h1>Random Dog & Cat Dashboard</h1>
+
+    <div class="top-sections">
+      <section id="dog-section">
+        <div class="display-box" id="dog-display">
+          <div class="loader hidden"></div>
+        </div>
+        <button id="dog-btn">Show me a dog</button>
+      </section>
+
+      <section id="cat-section">
+        <div class="display-box" id="cat-display">
+          <div class="loader hidden"></div>
+        </div>
+        <button id="cat-btn">Tell me a cat fact</button>
+      </section>
+    </div>
+
+    <section class="full-width" id="multi-section">
+      <div class="multi-display" id="multi-display">
+        <div class="loader hidden"></div>
+      </div>
+      <button id="multi-btn">Show 3 dogs at once</button>
+    </section>
+
     <script src="./index.js"></script>
   </body>
 </html>
