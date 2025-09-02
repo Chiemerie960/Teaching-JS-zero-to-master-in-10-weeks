@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Simple Calculator</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: #f2f2f2;
+      }
+      .calculator {
+        width: 280px;
+        background: white;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+      .display {
+        background: #222;
+        color: white;
+        font-size: 2rem;
+        text-align: right;
+        padding: 15px;
+        border-radius: 6px;
+        margin-bottom: 15px;
+        overflow-x: auto;
+      }
+      .keys {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+      }
+      button {
+        padding: 15px;
+        font-size: 1.2rem;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        background: #eee;
+      }
+      button.zero {
+        grid-column: span 2;
+      }
+      button.operator {
+        background: #0077ff;
+        color: white;
+      }
+      button.equals {
+        background: #28a745;
+        color: white;
+        grid-column: span 2;
+      }
+      button.clear {
+        background: #dc3545;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <script>
+      function createCalculator() {
+        // All calculator keys
+        const KEYS = [
+          "7",
+          "8",
+          "9",
+          "÷",
+          "4",
+          "5",
+          "6",
+          "×",
+          "1",
+          "2",
+          "3",
+          "-",
+          "0",
+          ".",
+          "+",
+          "=",
+          "C",
+          "⌫",
+        ];
+
+        // --- UI ---
+        const app = document.getElementById("app");
+        const calc = document.createElement("div");
+        calc.className = "calculator";
+
+        const display = document.createElement("div");
+        display.className = "display";
+        display.textContent = "0"; // start with 0
+        calc.appendChild(display);
+
+        const keys = document.createElement("div");
+        keys.className = "keys";
+        calc.appendChild(keys);
+
+        app.appendChild(calc);
+
+        // --- State (memory) ---
+        let current = "0"; // what user is typing
+        let previous = null; // previous number
+        let operator = null; // + - × ÷
+
+        // Update the screen
+        function render() {
+          display.textContent = current;
+        }
+
+        // Do the math
+        function calculate(a, operator, b) {
+          a = Number(a);
+          b = Number(b);
+          if (operator === "+") return a + b;
+          if (operator === "-") return a - b;
+          if (operator === "×") return a * b;
+          if (operator === "÷") return b === 0 ? "Error" : a / b;
+          return b;
+        }
+
+        // Handle button press
+        function handleKey(key) {
+          // If it's a number
+          if (!isNaN(key)) {
+            current = current === "0" ? key : current + key;
+          }
+          // Decimal point
+          else if (key === ".") {
+            if (!current.includes(".")) {
+              current += ".";
+            }
+          }
+          // Clear everything
+          else if (key === "C") {
+            current = "0";
+            previous = null;
+            operator = null;
+          }
+          // Delete last digit
+          else if (key === "⌫") {
+            current = current.length > 1 ? current.slice(0, -1) : "0";
+          }
+          // Operators + - × ÷
+          else if ("+-×÷".includes(key)) {
+            previous = current; // save the first number
+            operator = key; // save the operator
+            current = "0"; // reset screen for next input
+          }
+          // Equals (=)
+          else if (key === "=") {
+            if (previous !== null && operator !== null) {
+              current = String(calculate(previous, operator, current));
+              previous = null;
+              operator = null;
+            }
+          }
+
+          render();
+        }
+
+        // --- Create buttons dynamically ---
+        KEYS.map((label) => {
+          const btn = document.createElement("button");
+          btn.textContent = label;
+
+          if ("+-×÷".includes(label)) btn.classList.add("operator");
+          if (label === "=") btn.classList.add("equals");
+          if (label === "0") btn.classList.add("zero");
+          if (label === "C" || label === "⌫") btn.classList.add("clear");
+
+          btn.onclick = () => handleKey(label);
+          keys.appendChild(btn);
+        });
+
+        render();
+      }
+
+      createCalculator();
+    </script>
+  </body>
+</html>
